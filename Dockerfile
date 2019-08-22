@@ -1,6 +1,8 @@
-FROM ubuntu
+FROM ubuntu:18.04
+ENV http_proxy 'proxy.com'
 RUN apt-get update
 RUN apt-get -y install apt-transport-https
+RUN apt-get -y install libssl-dev
 RUN apt-get -y install openssl
 RUN apt-get -y install zip
 RUN apt-get -y install curl
